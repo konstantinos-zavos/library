@@ -10,3 +10,10 @@ text-rendering: optimizelegibility;
 p, a, div {
     font-size: 1.6rem;
 }
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
