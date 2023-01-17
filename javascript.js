@@ -3,7 +3,6 @@ let myLibrary = [];
 function Book(bookName, bookAuthor) {
     this.bookName = bookName
     this.bookAuthor = bookAuthor
-
 }
 
 function addBookToLibrary() {
