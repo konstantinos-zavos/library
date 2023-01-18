@@ -9,7 +9,7 @@ text-rendering: optimizelegibility;
 
 html {
     height:100vh;
-    background-color: #9ACDE0;
+    background-color: #9acde0e3;
 }
 
 p, a, div {
@@ -17,13 +17,15 @@ p, a, div {
 }
 
 .header > .container {
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 50px;
+    padding: 30px;
     background-color: #9ACDE0;
-}
+    margin-bottom: 10px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;}
 
 .main {
     display: flex;
@@ -40,8 +42,11 @@ p, a, div {
     background-color: #CBE1EF;
     height: 100%;
     border-radius: 30px;
-    width: 125vh;
+    /* width: 125vh; */
+    width: 60%;
     margin: auto;
+    border: 1px solid white;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
 }
 
 .main > .main-container {
@@ -56,17 +61,51 @@ p, a, div {
 }
 
 .main > .main-container > .card {
-    border: 5px solid black;
+    border: 1px solid white;
     padding: 10px;
     background-color: #FFDDD3;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
 }
-        /* 
-        .footer {
-            position:fixed;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            background-color: transparent;
-            color: white;
-            text-align: center;
-        } */
+
+.button-21 {
+  align-items: center;
+  appearance: none;
+  background-color: #4845D2;
+  background-image: linear-gradient(1deg, #4845D2, #4845D2 99%);
+  background-size: calc(100% + 20px) calc(100% + 20px);
+  border-radius: 100px;
+  border-width: 0;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: CircularStd,sans-serif;
+  font-size: 1rem;
+  height: auto;
+  justify-content: center;
+  line-height: 1.5;
+  padding: 6px 20px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color .2s,background-position .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.button-21:active,
+.button-21:focus {
+  outline: none;
+}
+
+.button-21:hover {
+  background-position: -20px -20px;
+}
+
+.button-21:focus:not(:active) {
+  box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 .125em;
+}
