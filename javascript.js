@@ -24,13 +24,13 @@ function loopThroughBooks() {
     // Creates name div
     const bookNameCard = document.createElement("div");
     bookNameCard.classList.add("book-name");
-    bookNameCard.textContent = `Book name:${Book.bookName}`;
+    bookNameCard.textContent = `${Book.bookName}`;
     card.appendChild(bookNameCard);
 
     // Creates author div
     const bookAuthorCard = document.createElement("div");
     bookAuthorCard.classList.add("book-author");
-    bookAuthorCard.textContent = `Book author:${Book.bookAuthor}`;
+    bookAuthorCard.textContent = `by ${Book.bookAuthor}`;
     card.appendChild(bookAuthorCard);
   }
   return (myLibrary = []);
