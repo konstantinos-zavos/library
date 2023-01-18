@@ -17,6 +17,11 @@ function loopThroughtBooks() {
   for (let Book of myLibrary) {
     console.log(Book);
     console.log(Book.bookName);
+    const container = document.querySelector('.main');
+    const content = document.createElement('div');
+    content.classList.add('content');
+    content.textContent = `Author:${Book.bookName}`;
+    container.appendChild(content);
   }
 }
 
