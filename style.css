@@ -73,6 +73,11 @@ p, a, div {
   font-style: italic;
 }
 
+.book-pages {
+  font-weight: bolder;
+  font-size: 2vh;
+}
+
 
 /* I've used a pre-built css button from 
 https://getcssscan.com/css-buttons-examples */
