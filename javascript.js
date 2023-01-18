@@ -23,6 +23,10 @@ function loopThroughBooks() {
     card.classList.add("card");
     container.appendChild(card);
 
+    const image = document.createElement('img')
+    image.src  = 'https://cover2coverbookdesign.com/site/wp-content/uploads/2019/03/geometric1.jpg'
+    card.appendChild(image);
+
     // Creates name div
     const bookNameCard = document.createElement("div");
     bookNameCard.classList.add("book-name");
