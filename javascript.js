@@ -25,10 +25,11 @@ function loopThroughtBooks() {
     const card = document.querySelector('.content');
     const cardContent = document.createElement('div');
     cardContent.classList.add('card');
-    cardContent.textContent = `Author:${Book.bookName}`;
+    cardContent.textContent = `Book name:${Book.bookName}`;
     // Creates a new div that includes information about the object's first attribute bookName
     card.appendChild(cardContent);
   }
+  return myLibrary = [];
 }
 
 // addBookToLibrary();
