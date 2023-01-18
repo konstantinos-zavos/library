@@ -13,7 +13,7 @@ function addBookToLibrary() {
   return pushToArray;
 }
 
-function loopThroughtBooks() {
+function loopThroughBooks() {
   for (const Book of myLibrary) {
     // Creates a new card
     const container = document.querySelector(".main-container");
@@ -36,4 +36,7 @@ function loopThroughtBooks() {
   return (myLibrary = []);
 }
 
-// addBookToLibrary();
+function combined() {
+  addBookToLibrary();
+  loopThroughBooks();
+}
