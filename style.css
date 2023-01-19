@@ -136,7 +136,6 @@ https://getcssscan.com/css-buttons-examples */
   box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 .125em;
 }
 
-
 .main > a {
   background-color:#9acde08f;
   border-radius: 50px;
@@ -163,6 +162,8 @@ https://getcssscan.com/css-buttons-examples */
   float: right;
   font-size: 28px;
   font-weight: bold;
+  position: relative;
+  left: 95%;
 }
 
 .close:hover,
@@ -177,5 +178,7 @@ https://getcssscan.com/css-buttons-examples */
   margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
-  width: 40%; /* Could be more or less, depending on screen size */
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
 }
