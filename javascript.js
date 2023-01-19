@@ -44,6 +44,12 @@ function loopThroughBooks() {
     bookPagesCard.classList.add("book-pages");
     bookPagesCard.textContent =`Pages: ${Book.bookPages}`;
     card.appendChild(bookPagesCard);
+
+    // Creates read div
+    const bookRead = document.createElement("div");
+    bookRead.classList.add("book-read");
+    bookRead.textContent =`Pages: ${Book.bookPages}`;
+    card.appendChild(bookRead);
   }
   return (myLibrary = []);
 }
