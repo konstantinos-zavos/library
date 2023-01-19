@@ -70,6 +70,9 @@ function loopThroughBooks() {
     bookReadTest3.classList.add("slider-round")
     bookReadTest.appendChild(bookReadTest3);
   }
+  let abcElements = document.querySelectorAll('.card');
+  for (let i = 0; i < abcElements.length; i++)
+  abcElements[i].id = 'book-' + i;
   return (myLibrary = []);
 }
 
@@ -111,7 +114,6 @@ function testFunct() {
 
 function deleteCard() {
   testFunct()
-  // return alert("problem")
   const child = document.querySelector(".remove-card");
   return child?.parentElement?.remove();
 }
