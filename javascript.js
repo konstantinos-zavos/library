@@ -6,14 +6,17 @@ function Book(bookName, bookAuthor, bookPages) {
   this.bookPages = bookPages;
 }
 
-function addBookToLibrary() {
-  bookName = prompt("What is the bookname?");
-  bookAuthor = prompt("Who is the author?");
-  bookPages = prompt("How many pages?")
-  const userInput = new Book(bookName, bookAuthor, bookPages);
-  const pushToArray = myLibrary.push(userInput);
-  return pushToArray;
-}
+// Previous code that pushed object into the array
+
+// function addBookToLibrary() {
+//   bookName = prompt("What is the bookname?");
+//   bookAuthor = prompt("Who is the author?");
+//   bookPages = prompt("How many pages?")
+//   const userInput = new Book(bookName, bookAuthor, bookPages);
+//   const pushToArray = myLibrary.push(userInput);
+//   return pushToArray;
+// }
+
 
 function loopThroughBooks() {
   for (const Book of myLibrary) {
@@ -24,7 +27,7 @@ function loopThroughBooks() {
     container.appendChild(card);
     
     // Create X button
-    const crossButton = document.createElement("span");
+    const crossButton = document.createElement("div");
     crossButton.classList.add("remove-card")
     crossButton.textContent = '×'
     // crossButton.setAttribute("onclick","deleteCard()");
@@ -57,10 +60,6 @@ function loopThroughBooks() {
     card.appendChild(bookPagesCard);
 
     // Creates read div
-    // const bookRead = document.createElement("div");
-    // bookRead.classList.add("book-read");
-    // bookRead.textContent =`Toggle button here`;
-    // card.appendChild(bookRead);
     const bookReadTest = document.createElement("label");
     bookReadTest.classList.add("switch")
     card.appendChild(bookReadTest)
@@ -70,27 +69,8 @@ function loopThroughBooks() {
     const bookReadTest3 = document.createElement("span");
     bookReadTest3.classList.add("slider-round")
     bookReadTest.appendChild(bookReadTest3);
-
-
-
-
-
-
-
-
   }
   return (myLibrary = []);
-}
-
-function combined() {
-  addBookToLibrary();
-  loopThroughBooks();
-}
-
-window.onclick = function(event) {
-  if (event.target == document.getElementById("myModal")) {
-    document.getElementById("myModal").style.display = "none";
-  }
 }
 
 function openModal() {
@@ -101,13 +81,19 @@ function closeModal() {
 document.getElementById("myModal").style.display = "none";
 }
 
-const sumbit = document.querySelector("#sumbit");
-sumbit.addEventListener("click", sumbitClick, false);
-function sumbitClick(event) {
+window.onclick = function(event) {
+  if (event.target == document.getElementById("myModal")) {
+    document.getElementById("myModal").style.display = "none";
+  }
+}
+
+const submit = document.querySelector("#submit");
+submit.addEventListener("click", submitClick, false);
+function submitClick(event) {
   event.preventDefault();
 }
 
-function modalSumbit() {
+function modalSubmit() {
   bookName = document.getElementById("book_name").value;
   bookAuthor = document.getElementById("book_author").value;
   bookPages = document.getElementById("book_pages").value;
@@ -120,7 +106,12 @@ function modalSumbit() {
 
 
 
-
+function testFunct() {
+  const test = document.querySelector(".remove-card");
+  
+  const testCHange = test.textContent = "wow it worked";
+  return testCHange
+}
 
 
 function deleteCard() {
