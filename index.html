@@ -19,7 +19,13 @@
     <main class="main">
         <!-- Make this img open a modal, the button inside the modal will take the input from the user and create a new object that will be pushed into the array,
         after that, the button will also print the array's contents and clean it to prepare for the next object -->
-        <a href="#" onclick="combined()"><img src="https://www.freeiconspng.com/thumbs/plus-icon/plus-icon-black-2.png" height="70px"/></a>
+        <a href="#" onclick="openModal()" ><img src="https://www.freeiconspng.com/thumbs/plus-icon/plus-icon-black-2.png" height="70px"/></a>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span class="close" onclick="closeModal()">&times;</span>
+              <p>Some text in the Modal..</p>
+            </div>
+          </div>
     <div class="main-container">
         <div class="card">
             <img src="https://m.media-amazon.com/images/I/51cQEdN9KuL._AC_SY780_.jpg" alt="">
