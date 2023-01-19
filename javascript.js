@@ -37,7 +37,7 @@ function loopThroughBooks() {
 
     // Create img div
     const image = document.createElement('img')
-    image.src  = './img/sample-cover.jpg'
+    image.src  = 'https://cover2coverbookdesign.com/site/wp-content/uploads/2019/03/geometric1.jpg'
     card.appendChild(image);
 
 
