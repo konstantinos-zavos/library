@@ -61,8 +61,16 @@ window.onclick = function(event) {
 
 function openModal() {
 document.getElementById("myModal").style.display = "block";
- }
+}
 
 function closeModal() {
 document.getElementById("myModal").style.display = "none";
- }
+}
+
+const sumbit = document.querySelector("#sumbit");
+
+sumbit.addEventListener("click", sumbitClick, false);
+
+function sumbitClick(event) {
+  event.preventDefault();
+}
