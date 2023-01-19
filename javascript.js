@@ -30,7 +30,7 @@ function loopThroughBooks() {
     const crossButton = document.createElement("div");
     crossButton.classList.add("remove-card")
     crossButton.textContent = '×'
-    // crossButton.setAttribute("onclick","deleteCard()");
+    crossButton.setAttribute("onclick","deleteCard()");
     // crossButton.onclick = deleteCard();
     // card.id.add("child");
     card.appendChild(crossButton)
@@ -104,20 +104,16 @@ function modalSubmit() {
   return document.getElementById('form').reset();
 }
 
-
-
 function testFunct() {
   const test = document.querySelector(".remove-card");
-  
-  const testCHange = test.textContent = "wow it worked";
-  return testCHange
+  test.setAttribute("onclick","deleteCard();");
 }
 
-
 function deleteCard() {
-  // const child = document.getElementsByClassName('span');
-  // child.parentElement.parentElement.remove();
-  alert("problem")
+  testFunct()
+  // return alert("problem")
+  const child = document.querySelector(".remove-card");
+  return child?.parentElement?.remove();
 }
 
 // const crossButton = document.querySelector(".remove-card");
