@@ -57,10 +57,24 @@ function loopThroughBooks() {
     card.appendChild(bookPagesCard);
 
     // Creates read div
-    const bookRead = document.createElement("div");
-    bookRead.classList.add("book-read");
-    bookRead.textContent =`Toggle button here`;
-    card.appendChild(bookRead);
+    // const bookRead = document.createElement("div");
+    // bookRead.classList.add("book-read");
+    // bookRead.textContent =`Toggle button here`;
+    // card.appendChild(bookRead);
+    const bookReadTest = document.createElement("label");
+    bookReadTest.classList.add("switch")
+    card.appendChild(bookReadTest)
+    const bookReadTest2 = document.createElement("input");
+    bookReadTest2.type = "checkbox"
+    bookReadTest.appendChild(bookReadTest2);
+    const bookReadTest3 = document.createElement("span");
+    bookReadTest3.classList.add("slider-round")
+    bookReadTest.appendChild(bookReadTest3);
+
+
+
+
+
 
 
 
