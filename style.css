@@ -182,3 +182,16 @@ https://getcssscan.com/css-buttons-examples */
   display: flex;
   flex-direction: column;
 }
+
+input {
+  width:200px;
+  padding:20px;
+  box-sizing: border-box;
+  padding:10px;
+  margin:10px 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
