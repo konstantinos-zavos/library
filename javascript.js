@@ -22,10 +22,19 @@ function loopThroughBooks() {
     const card = document.createElement("div");
     card.classList.add("card");
     container.appendChild(card);
+    
+    // Create X button
+    const crossButton = document.createElement("span");
+    crossButton.classList.add("remove-card")
+    crossButton.textContent = '×'
+    crossButton.setAttribute("onclick","alert('blah');");
+    card.appendChild(crossButton)
 
+    // Create img div
     const image = document.createElement('img')
     image.src  = 'https://cover2coverbookdesign.com/site/wp-content/uploads/2019/03/geometric1.jpg'
     card.appendChild(image);
+
 
     // Creates name div
     const bookNameCard = document.createElement("div");
@@ -48,8 +57,11 @@ function loopThroughBooks() {
     // Creates read div
     const bookRead = document.createElement("div");
     bookRead.classList.add("book-read");
-    bookRead.textContent =`Pages: ${Book.bookPages}`;
+    bookRead.textContent =`Toggle button here`;
     card.appendChild(bookRead);
+
+
+
   }
   return (myLibrary = []);
 }
