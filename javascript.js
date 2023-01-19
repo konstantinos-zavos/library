@@ -74,3 +74,14 @@ sumbit.addEventListener("click", sumbitClick, false);
 function sumbitClick(event) {
   event.preventDefault();
 }
+
+function modalSumbit() {
+  bookName = document.getElementById("book_name").value;
+  bookAuthor = document.getElementById("book_author").value;
+  bookPages = document.getElementById("book_pages").value;
+  const userInput = new Book(bookName, bookAuthor, bookPages);
+  myLibrary.push(userInput);
+  closeModal();
+  loopThroughBooks();
+  return document.getElementById('form').reset();
+}
