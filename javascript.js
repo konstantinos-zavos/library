@@ -27,7 +27,9 @@ function loopThroughBooks() {
     const crossButton = document.createElement("span");
     crossButton.classList.add("remove-card")
     crossButton.textContent = '×'
-    crossButton.setAttribute("onclick","alert('blah');");
+    // crossButton.setAttribute("onclick","deleteCard()");
+    // crossButton.onclick = deleteCard();
+    // card.id.add("child");
     card.appendChild(crossButton)
 
     // Create img div
@@ -86,9 +88,7 @@ document.getElementById("myModal").style.display = "none";
 }
 
 const sumbit = document.querySelector("#sumbit");
-
 sumbit.addEventListener("click", sumbitClick, false);
-
 function sumbitClick(event) {
   event.preventDefault();
 }
@@ -103,3 +103,19 @@ function modalSumbit() {
   loopThroughBooks();
   return document.getElementById('form').reset();
 }
+
+
+
+
+
+
+function deleteCard() {
+  // const child = document.getElementsByClassName('span');
+  // child.parentElement.parentElement.remove();
+  alert("problem")
+}
+
+// const crossButton = document.querySelector(".remove-card");
+// crossButton.onclick = deleteCard();
+// const card = document.querySelector(".card");
+// card.id.add("child");
