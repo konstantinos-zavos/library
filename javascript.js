@@ -6,18 +6,6 @@ function Book(bookName, bookAuthor, bookPages) {
   this.bookPages = bookPages;
 }
 
-// Previous code that pushed object into the array
-
-// function addBookToLibrary() {
-//   bookName = prompt("What is the bookname?");
-//   bookAuthor = prompt("Who is the author?");
-//   bookPages = prompt("How many pages?")
-//   const userInput = new Book(bookName, bookAuthor, bookPages);
-//   const pushToArray = myLibrary.push(userInput);
-//   return pushToArray;
-// }
-
-
 function loopThroughBooks() {
   for (const Book of myLibrary) {
     // Creates a new card
@@ -25,21 +13,21 @@ function loopThroughBooks() {
     const card = document.createElement("div");
     card.classList.add("card");
     container.appendChild(card);
-    
+
     // Create X button
     const crossButton = document.createElement("div");
-    crossButton.classList.add("remove-card")
-    crossButton.textContent = '×'
-    crossButton.setAttribute("onclick","deleteCard()");
+    crossButton.classList.add("remove-card");
+    crossButton.textContent = "×";
+    crossButton.setAttribute("onclick", "deleteCard()");
     // crossButton.onclick = deleteCard();
     // card.id.add("child");
-    card.appendChild(crossButton)
+    card.appendChild(crossButton);
 
     // Create img div
-    const image = document.createElement('img')
-    image.src  = 'https://cover2coverbookdesign.com/site/wp-content/uploads/2019/03/geometric1.jpg'
+    const image = document.createElement("img");
+    image.src =
+      "https://cover2coverbookdesign.com/site/wp-content/uploads/2019/03/geometric1.jpg";
     card.appendChild(image);
-
 
     // Creates name div
     const bookNameCard = document.createElement("div");
@@ -56,39 +44,38 @@ function loopThroughBooks() {
     // Creates pages div
     const bookPagesCard = document.createElement("div");
     bookPagesCard.classList.add("book-pages");
-    bookPagesCard.textContent =`Pages: ${Book.bookPages}`;
+    bookPagesCard.textContent = `Pages: ${Book.bookPages}`;
     card.appendChild(bookPagesCard);
 
     // Creates read div
     const bookReadTest = document.createElement("label");
-    bookReadTest.classList.add("switch")
-    card.appendChild(bookReadTest)
+    bookReadTest.classList.add("switch");
+    card.appendChild(bookReadTest);
     const bookReadTest2 = document.createElement("input");
-    bookReadTest2.type = "checkbox"
+    bookReadTest2.type = "checkbox";
     bookReadTest.appendChild(bookReadTest2);
     const bookReadTest3 = document.createElement("span");
-    bookReadTest3.classList.add("slider-round")
+    bookReadTest3.classList.add("slider-round");
     bookReadTest.appendChild(bookReadTest3);
   }
-  let abcElements = document.querySelectorAll('.card');
-  for (let i = 0; i < abcElements.length; i++)
-  abcElements[i].id = 'book-' + i;
+  let abcElements = document.querySelectorAll(".card");
+  for (let i = 0; i < abcElements.length; i++) abcElements[i].id = "book-" + i;
   return (myLibrary = []);
 }
 
 function openModal() {
-document.getElementById("myModal").style.display = "block";
+  document.getElementById("myModal").style.display = "block";
 }
 
 function closeModal() {
-document.getElementById("myModal").style.display = "none";
+  document.getElementById("myModal").style.display = "none";
 }
 
-window.onclick = function(event) {
+window.onclick = function (event) {
   if (event.target == document.getElementById("myModal")) {
     document.getElementById("myModal").style.display = "none";
   }
-}
+};
 
 const submit = document.querySelector("#submit");
 submit.addEventListener("click", submitClick, false);
@@ -104,21 +91,16 @@ function modalSubmit() {
   myLibrary.push(userInput);
   closeModal();
   loopThroughBooks();
-  return document.getElementById('form').reset();
+  return document.getElementById("form").reset();
 }
 
 function testFunct() {
   const test = document.querySelector(".remove-card");
-  test.setAttribute("onclick","deleteCard();");
+  test.setAttribute("onclick", "deleteCard();");
 }
 
 function deleteCard() {
-  testFunct()
+  testFunct();
   const child = document.querySelector(".remove-card");
   return child?.parentElement?.remove();
 }
-
-// const crossButton = document.querySelector(".remove-card");
-// crossButton.onclick = deleteCard();
-// const card = document.querySelector(".card");
-// card.id.add("child");
