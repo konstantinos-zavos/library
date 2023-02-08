@@ -6,17 +6,6 @@ function Book(bookName, bookAuthor, bookPages) {
   this.bookPages = bookPages;
 }
 
-// Previous code that pushed object into the array
-
-// function addBookToLibrary() {
-//   bookName = prompt("What is the bookname?");
-//   bookAuthor = prompt("Who is the author?");
-//   bookPages = prompt("How many pages?")
-//   const userInput = new Book(bookName, bookAuthor, bookPages);
-//   const pushToArray = myLibrary.push(userInput);
-//   return pushToArray;
-// }
-
 function loopThroughBooks() {
   for (const Book of myLibrary) {
     // Creates a new card
